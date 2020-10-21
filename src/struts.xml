@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+       "http://struts.apache.org/dtds/struts-2.5.dtd">
+	
+<struts>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name = "default"  extends="struts-default">
+		<action name = "calculator" class="com.webcalc.action.CalculatorAction" method="executeCalculator">
+			<result name="success">/result.jsp</result>
+			<result name="input">/calculator.jsp</result>
+			<result name="error">/calculator.jsp</result>  
+		</action>
+		<action name = "results" class="com.webcalc.action.CalculatorAction" method="executeResult">
+			<result name="success">/resuts.jsp</result> 
+			<result name="error">/calculator.jsp</result>
+		</action>
+	</package>
+</struts>
+
